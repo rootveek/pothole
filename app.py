@@ -60,7 +60,7 @@ elif mode == "Live Webcam":
 
     if st.button("Start Live Detection"):
         ip_camera_url = "http://192.168.252.237:4747/video"
-        cap = cv2.VideoCapture(ip_camera_url)
+        cap = cv2.VideoCapture(0)
 
         if not cap.isOpened():
             st.error("🚫 Could not open webcam stream. Check the IP camera URL.")
